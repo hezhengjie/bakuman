@@ -1,0 +1,43 @@
+{
+	"name": "bakuman",
+	"version": "0.0.1",
+	"description": "A drawer",
+	"keywords": [
+		"canvas"
+	],
+	"main": "dist/bakuman.js",
+	"module": "dist/bakuman.es.js",
+	"moduleName": "Bakuman",
+	"scripts": {
+		"test": "mocha test/index.js",
+		"start": "cd example && http-server",
+		"watch": "NODE_ENV=example rollup -w -c rollup.config.js",
+		"demo": "NODE_ENV=example rollup -c rollup.config.js",
+		"dev": "NODE_ENV=development rollup -c rollup.config.js",
+		"prod": "NODE_ENV=production rollup -c rollup.config.js",
+		"publish": "rm -rf dist && npm run prod",
+		"lint": "eslint src"
+	},
+	"repository": {
+		"url": "https://github.com/hezhengjie/bakuman.git",
+		"type": "git"
+	},
+	"author": "hugh",
+	"license": "MIT",
+	"devDependencies": {
+		"babel-eslint": "^7.2.2",
+		"babel-plugin-syntax-flow": "^6.18.0",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-flow-strip-types": "^6.22.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"eslint": "^3.19.0",
+		"http-server": "^0.11.1",
+		"mocha": "^3.2.0",
+		"rollup-plugin-babel": "^2.7.1",
+		"rollup-plugin-node-resolve": "^3.0.0",
+		"rollup-plugin-sourcemaps": "^0.4.2",
+		"rollup-plugin-uglify": "^1.0.1",
+		"rollup-watch": "^3.2.2"
+	}
+}
